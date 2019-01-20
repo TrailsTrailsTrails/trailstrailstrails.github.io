@@ -6,8 +6,8 @@ body, html {
     background-color: #282828;
 }
 
-@media only screen and (min-width: 480px) {  /* DESKTOP: we change height via JS:parallax */
-    .nav {
+@media only screen and (min-width: 481px) {  /* DESKTOP: */
+    .nav {  /* fixed, full screen: we change height via JS:parallax */
         position: fixed;
         top: 0;
         right: 0;
@@ -29,9 +29,29 @@ body, html {
         overflow: hidden;
         z-index: 1;
     }
+
+    .nav h1 {
+        color: #efefef;
+        font-size: 5vw;
+        margin-bottom: 0;
+    }
+    .nav h2 {
+        color: #efefef;
+        font-size: 2vw;
+        margin-top: 0;
+    }
+    .nav h3 {
+        color: #efefef;
+        font-size: 1vw;
+        margin: 0;
+    }
+
+    .subtitle {
+        margin-bottom: 10px;
+    }
 }
-@media only screen and (max-width: 479px) { /* MOBILE: div does not change but scrolls like an image */
-    .nav {
+@media only screen and (max-width: 480px) { /* MOBILE: */
+    .nav { /* div does not change but scrolls like an image */
         top: 0;
         right: 0;
         bottom: 0;
@@ -52,6 +72,27 @@ body, html {
         overflow: hidden;
         z-index: 1;
     }
+
+    .nav h1 { /* double the size */
+        color: #efefef;
+        font-size: 10vw;
+        margin-bottom: 0;
+    }
+    .nav h2 { /* double the size */
+        color: #efefef;
+        font-size: 4vw;
+        margin-top: 0;
+    }
+    .nav h3 { /* double the size */
+        color: #efefef;
+        font-size: 2vw;
+        margin: 0;
+    }
+
+    .subtitle { /* double the size */
+        margin-bottom: 10px;
+        font-size: 1vw;
+    }
 }
 
 .nav_main {
@@ -70,21 +111,7 @@ body, html {
     z-index: 1;
     text-align: center;
 }
-.nav h1 {
-     color: #efefef;
-     font-size: 5vw;
-    margin-bottom: 0;
- }
-.nav h2 {
-    color: #efefef;
-    font-size: 2vw;
-    margin-top: 0;
-}
-.nav h3 {
-    color: #efefef;
-    font-size: 1vw;
-    margin: 0;
-}
+
 .nav:before {
     content: "";
     background: transparent;
@@ -99,7 +126,6 @@ body, html {
 .nav.fixme:before {
     background: rgba(0, 0, 0, 0.8);
 }
-
 
 .home img {
     width: 2.5vw;
@@ -156,10 +182,6 @@ a:hover {
 a:active {
     text-decoration: underline;
     color: #efefef;
-}
-
-.subtitle {
-    margin-bottom: 10px;
 }
 
 .videoWrapper {
