@@ -6,28 +6,54 @@ body, html {
     background-color: #282828;
 }
 
-.nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    height: 100%;
-    min-height: 5vw;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-    z-index: 1;
+@media only screen and (min-width: 480px) {  /* DESKTOP: we change height via JS:parallax */
+    .nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        height: 100%;
+        min-height: 5vw;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        z-index: 1;
+    }
 }
+@media only screen and (max-width: 479px) { /* MOBILE: div does not change but scrolls like an image */
+    .nav {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        height:100vh;
+        min-height: 5vw;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        z-index: 1;
+    }
+}
+
 .nav_main {
     background-image: url(../img/back-01.jpg);
 }
