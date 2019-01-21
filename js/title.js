@@ -22,3 +22,7 @@ var parallax = function() {
     }
 };
 parallax();
+
+window.addEventListener("resize", function() {
+    window.location.reload(false);
+}, false);
